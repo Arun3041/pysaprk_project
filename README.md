@@ -7,11 +7,16 @@
   - Install docker 
   - build pyspark Image(Ater creating dockerfile run below command)
     
-     command:- docker build -t image_name:latest .
+    command:-
+
+          docker build -t image_name:latest .
     
-  - pull PostgreSQL Image
+  - pull Postgres Image
     
-    command:-. docker pull postgres
+    command:-
+    
+             . docker pull postgres
+    
              . docker run --name postgres-env -p 5432:5432 -e POSTGRES_PASSWORD=root -d postgres
 
 # Overview
