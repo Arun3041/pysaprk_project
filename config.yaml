@@ -1,0 +1,26 @@
+aws:
+  aws_access_key_id : 'AKIA2GXT73H7NWVZGZAN'
+  aws_secret_access_key : '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'
+  region: 'us-east-1'
+
+s3:
+  bucket_name: 'pyspark-trp'
+  s3_key: 'manish_2022_data.csv'
+
+postgres:
+  user: "postgres"
+  password: "root"
+  driver: "org.postgresql.Driver"
+  database_url:  "jdbc:postgresql://172.17.0.2:5432/postgres"  
+
+s3pull:
+  source_bucket: "pyspark-trp-01"
+  source_file: "arun.csv"
+  target_table: "TRP"
+  source_sql: "SELECT * FROM csv_tbl WHERE country = 'India';"  
+
+
+s3push:
+  num_of_partions : 2
+  target_bucket : "pyspark-trp-01"
+  source_table : "TRP" 

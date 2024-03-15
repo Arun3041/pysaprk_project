@@ -1,0 +1,7 @@
+pyspark
+pandas
+numpy
+boto3
+botocore
+psycopg2-binary
+pyyaml
